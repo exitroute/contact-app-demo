@@ -1,11 +1,9 @@
 var express = require("express");
 var router = express.Router();
 
+const { welcomeMessage } = require("../controllers/messagesController");
+
 /* GET home page. */
-router.get("/", function(req, res) {
-  res.json({
-    message: "Welcome to my contact app project"
-  });
-});
+router.get("/", welcomeMessage);
 
 module.exports = router;
